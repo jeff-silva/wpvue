@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# Wordpress Plugin using Vue3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Dev mode
+Run the command above, then edit using hot reload at http://localhost:5173/
+```bash
+docker-compose up
+```
+Each element created in `/elements` folder turns into a [HTML Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with the same file name.
+You can, for example, create a `app-test.vue` file then insert the component `<app-test></app-test>` in any place of Wordpress.
 
-## Recommended IDE Setup
+## Build
+Run the command above to generate the build, then you can use the elements.
+```bash
+docker-compose -f docker-compose-build.yml up
+```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+This repository can be used to make WP theme too, just rename plugin-wpvue.php to functions.php, then create the necessary files to a theme like style.css, index.php, etc.
