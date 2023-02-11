@@ -4,7 +4,7 @@ services:
 
     vite-build:
         image: node:lts
-        working_dir: /var/www/html/wp-content/plugins/test-wp-plugin
+        working_dir: /var/www/html/wp-content/plugins/wpvue
         command: bash -c "yarn install && yarn build"
         volumes: 
-            - .:/var/www/html/wp-content/plugins/test-wp-plugin
+            - .:/var/www/html/wp-content/plugins/wpvue

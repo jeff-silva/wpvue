@@ -3,6 +3,5 @@
 </script>
 
 <template>
-  <test-vite></test-vite>
   <admin-footer></admin-footer>
 </template>

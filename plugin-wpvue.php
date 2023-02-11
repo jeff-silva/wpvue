@@ -28,6 +28,6 @@ add_action('admin_footer', function() {
   $user = wp_get_current_user();
   ?><admin-footer
     user-name="<?php echo $user->data->display_name; ?>"
-    style="position:fixed; bottom:10px; right:10px;"
+    style="position:fixed; bottom:15px; right:15px; z-index:999;"
   ></admin-footer><?php
 });

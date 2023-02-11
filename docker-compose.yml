@@ -26,17 +26,17 @@ services:
             WORDPRESS_DB_PASSWORD: ${WP_DB_PASS:-wpdb}
             WORDPRESS_DB_NAME: ${WP_DB_NAME:-wpdb}
         volumes: 
-            - .:/var/www/html/wp-content/plugins/test-wp-plugin
+            - .:/var/www/html/wp-content/plugins/wpvue
 
     vite:
         image: node:lts
-        working_dir: /var/www/html/wp-content/plugins/test-wp-plugin
+        working_dir: /var/www/html/wp-content/plugins/wpvue
         command: bash -c "yarn install && yarn dev"
         env_file: .env
         ports: 
             - ${VITE_PORT:-5173}:${VITE_PORT:-5173}
         volumes: 
-            - .:/var/www/html/wp-content/plugins/test-wp-plugin
+            - .:/var/www/html/wp-content/plugins/wpvue
         tty: true
         
 volumes: 
